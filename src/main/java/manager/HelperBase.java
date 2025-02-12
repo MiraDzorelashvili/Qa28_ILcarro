@@ -1,9 +1,6 @@
 package manager;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,9 +22,17 @@ public class HelperBase {
         WebElement element = wd.findElement(locator);
         element.click();
         element.clear();
+        clearNew(element);
         if (text !=null){
             element.sendKeys(text);
         }
+    }
+
+    public void clearNew(WebElement element) {
+        element.sendKeys( " ");
+        element.sendKeys(Keys.BACK_SPACE);
+
+
     }
 
     public void pause(int time){
@@ -42,4 +47,15 @@ public class HelperBase {
         return wd.findElements(locator).size()>0;
     }
 
+    public String getErrorText() {
+        return wd.findElement(By.cssSelector("div.error")).getText();
+    }
+
+    public boolean isYallaButtonNotActive() {
+       boolean res = isElementPresent(By.cssSelector("button[disabled]"));
+        WebElement element = wd.findElement(By.cssSelector("button[type='submit']"));
+       boolean result = element.isEnabled();
+
+        return !result && res;
+    }
 }
