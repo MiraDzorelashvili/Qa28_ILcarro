@@ -56,9 +56,9 @@ public class HelperUser extends HelperBase {
     //*******Registration********
 
     public void openRegistrationForm() {
-        click(By.xpath("//*[text()=' Sigh up ']"));
-
+        click(By.xpath("//*[text()=' Sign up ']"));
     }
+
 
     public void fillRegistrationForm(User user) {
         type(By.id("name"), user.getFirsName());
