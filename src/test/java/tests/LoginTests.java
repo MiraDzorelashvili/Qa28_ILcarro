@@ -101,6 +101,6 @@ public class LoginTests extends TestBase {
     }
         @AfterMethod
    public void postCondition(){
-        app.getHelperUser().clickOKButton();
+        app.getHelperUser().clickOkButton();
    }
 }

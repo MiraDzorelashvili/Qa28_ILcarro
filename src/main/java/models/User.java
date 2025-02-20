@@ -1,37 +1,34 @@
 package models;
 
 public class User {
-    private  String firstName;
-    private  String lastName;
-    private  String email;
-    private  String password;
+    private String firsName;
+    private String lastName;
+    private String email;
+    private String password;
 
 
-    public User withFirstName(String firstName) {
-        this.firstName = firstName;
+    public User setFirsName(String firsName) {
+        this.firsName = firsName;
         return this;
     }
 
-    public User withLastName(String lastName) {
+    public User setLastName(String lastName) {
         this.lastName = lastName;
         return this;
-
     }
 
     public User setEmail(String email) {
         this.email = email;
         return this;
-
     }
 
     public User setPassword(String password) {
         this.password = password;
         return this;
-
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirsName() {
+        return firsName;
     }
 
     public String getLastName() {
@@ -49,7 +46,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "firstName='" + firstName + '\'' +
+                "firsName='" + firsName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +

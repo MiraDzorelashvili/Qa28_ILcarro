@@ -154,7 +154,7 @@ public class RegistrationTests extends TestBase {
     }
     @AfterMethod
     public void postCondition(){
-        app.getHelperUser().clickOKButton();
+        app.getHelperUser().clickOkButton();
     }
 
 
