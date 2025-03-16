@@ -1,13 +1,17 @@
 package tests;
 
+import manager.ApplicationManager;
 import models.Car;
 import models.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class AddNewCarTests extends TestBase{
+public class AddNewCarTests extends TestBase {
+    Logger logger = LoggerFactory.getLogger(AddNewCarTests.class);
 
     @BeforeClass
     public void preCondition(){

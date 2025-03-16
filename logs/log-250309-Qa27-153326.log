@@ -1,0 +1,5 @@
+15:33:28.948 INFO  manager.ApplicationManager -- All tests run in Chrome Browser
+15:33:31.193 INFO  manager.ApplicationManager -- The link--->https://ilcarro.web.app/search
+15:33:39.274 INFO  tests.AddNewCarTests -- Test data --->User{firsName='null', lastName='null', email='margo@gmail.com', password='Mmar123456$'}
+15:33:40.979 INFO  tests.AddNewCarTests -- Test data --->User{firsName='null', lastName='null', email='mira@gmail.com', password='Mmira1234$'}
+15:33:42.914 INFO  tests.AddNewCarTests -- Test data --->User{firsName='null', lastName='null', email='mara@gmail.com', password='Mmar123456$'}

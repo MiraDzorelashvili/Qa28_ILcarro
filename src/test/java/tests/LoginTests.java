@@ -1,18 +1,29 @@
 package tests;
 
+import manager.DataProviderUser;
 import models.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LoginTests extends TestBase {
-
+    Logger logger = LoggerFactory.getLogger(AddNewCarTests.class);
     @BeforeMethod
     public void preCondition(){
         if (app.getHelperUser().isLogged()){
             app.getHelperUser().logout();
         }
+    }
+    @Test(dataProvider = "loginModel", dataProviderClass = DataProviderUser.class)
+    public void loginSuccessModel(User user) {
+        logger.info(("Test data --->" + user.toString()));
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("mira@gmail.com","Mmira1234$");
+        app.getHelperUser().submit();
+        Assert.assertTrue(app.getHelperUser().isLogged());
     }
 
     @Test
